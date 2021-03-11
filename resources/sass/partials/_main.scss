@@ -23,3 +23,27 @@ main.products {
     }
   }
 }
+
+main.dettaglio {
+  padding: 20px 0;
+  text-align: center;
+  .dettagli {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .scheda {
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    h3 {
+      margin-top: 40px;
+    }
+    p {
+      margin: 0 auto;
+      width: 70%;
+      line-height: 1.6;
+    }
+  }
+}
