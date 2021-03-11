@@ -3,9 +3,9 @@
 @section('content')
   <main class="products">
 
-      @foreach ($pasta as $formato)
+      @foreach ($pasta as $k => $formato)
       <div class="box">
-      <img src="{{$formato['src']}}" alt="{{$formato['titolo']}}">
+        <a href="{{route('dettagli', ['id' => $k])}}"><img src="{{$formato['src']}}" alt="{{$formato['titolo']}}"></a>
       </div>
       @endforeach;
 
