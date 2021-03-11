@@ -19,7 +19,23 @@ Route::get('/', function () {
 ->name('home');
 
 Route::get('/prodotti', function () {
-    $data = ['pasta' => config('pasta')];
+    $pastaLunga = array_filter(config('pasta'), function($e){
+      return $e['tipo'] == 'lunga';
+    });
+
+    $pastaCorta = array_filter(config('pasta'), function($e){
+      return $e['tipo'] == 'corta';
+    });
+
+    $pastaCortissima = array_filter(config('pasta'), function($e){
+      return $e['tipo'] == 'cortissima';
+    });
+
+    $data = [
+      'pastaLunga' => $pastaLunga,
+      'pastaCorta' => $pastaCorta,
+      'pastaCortissima' => $pastaCortissima
+    ];
     return view('products', $data);
 })
 ->name('products');

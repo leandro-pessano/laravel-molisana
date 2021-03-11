@@ -14,7 +14,7 @@
       <img src="{{$dettaglio['src-h']}}" alt="{{$dettaglio['titolo']}}">
       <img src="{{$dettaglio['src-p']}}" alt="{{$dettaglio['titolo']}}">
       <h3>Descrizione:</h3>
-      <p>{{$dettaglio['descrizione']}}</p>
+      <p>{!!$dettaglio['descrizione']!!}</p>
     </div>
   </main>
 @endsection

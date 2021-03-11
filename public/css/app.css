@@ -32,16 +32,26 @@ main.news {
 main.products {
   width: 80%;
   margin: 0 auto;
+}
+
+main.products .pasta-lunga,
+main.products .pasta-corta,
+main.products .pasta-cortissima {
+  margin: 5px 0 40px;
   display: flex;
   flex-wrap: wrap;
 }
 
-main.products .box {
+main.products .pasta-lunga .box,
+main.products .pasta-corta .box,
+main.products .pasta-cortissima .box {
   width: calc(100% / 3);
   background-color: lightblue;
 }
 
-main.products .box img {
+main.products .pasta-lunga .box img,
+main.products .pasta-corta .box img,
+main.products .pasta-cortissima .box img {
   width: 100%;
 }
 
