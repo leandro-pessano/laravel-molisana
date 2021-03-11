@@ -41,8 +41,12 @@ Route::get('/prodotti', function () {
 ->name('products');
 
 Route::get('/dettaglio/{id}', function ($id) {
+  if (is_numeric($id) && $id >= 0 && $id < count(config('pasta'))) {
     $data = ['dettaglio' => config('pasta')[$id]];
     return view('dettagli', $data);
+  } else {
+    abort('404');
+  }
 })
 ->name('dettagli');
 
